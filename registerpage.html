@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/model.css"/>
+		<title></title>
+		<style>
+		</style>
+	</head>
+	<body>
+	  <!--登录页面头部-->
+			<!--登录页面头部-->
+			<header>
+				<div class="header">
+					<!--logo标志-->
+					<div class="logo">
+						<img src="img/登录页完成效果_03.png"/>
+					</div>
+					<!--指南-->
+					<div class="guild">
+						<span>您好，欢迎光临1号店！</span>
+						<a href="">请登录</a>
+						<span>
+							<img src="img/2018-01-12_141722.png" class="a1"/>
+							<span>帮助中心</span>
+						    <img src="img/2018-01-12_141731.png" class="a2"/>
+						</span>
+					</div>
+				</div>
+			</header>
+			<!-------------------main主体------------>
+			<form action="loginpage.html">
+			<main>
+				<div class="main">
+					<h1>1号店注册</h1>
+				 <!--注册：regsiter-->
+				<input type="text" class="regsiter" required="true" pattern="^1[3578]\d{9}$" autocomplete="on"  name="email"/><span class="sp">请输入手机号码</span><br />
+				<input type="text" class="regsiter-a" placeholder="请输入验证信息"/>
+				<button class="sj">获取验证码</button><span class="sp_a">1534</span><br />
+				<!--密码框-->
+				<input type="text" class="password" placeholder="设置密码" class="mima" required="true" pattern="^\w{6,10}$"/><span class="sp_b">请输入6-10位密码</span>
+				<br />
+				<input type="text" class="password_a" placeholder="确认密码" class="mima" required="true" pattern="^\w{6,10}$"/><span class="sp_c">请再次输入</span>
+				<br />
+                   <!--指南：guild-->    				
+				<div class="guild">
+					<span  onclick="check()">点击注册，表示您同意1号店<a href="#"><<用户协议>></a></span>
+				</div>
+				<!--登陆：login-->
+				<button class="login">
+					<a class="login_a">同意协议并注册</a>
+				</button>
+				<!----------------尾：footer　------------->	
+				<p class="footer-top">
+					泸ICP备13044278号 | 合字.B2-20130004 | 营业执照
+				</p>
+				<p class="footer-botton">
+					Copyright&copy 1号店网上超市 2017-2016，All Rights Reserved
+				</p>
+				
+				</div>
+			</main>
+			</form>
+			<script>
+				
+							//	用户名验证
+				$(".regsiter").blur(function () {
+					var user=$(this).val();
+					console.log(user);
+					var  reg=/^[0-9]{11}$/;//用户名由英文字母和数字组成的4-16位字符，以字母开头
+					if (reg.test(user)==false) {
+						$(".sp").html("用户名不正确");
+						$(".sp").css("color","red")
+						return false;
+					}
+					$(".sp").html("用户输入正确");
+					$(".sp").css("color","green");
+					
+					return true;
+				})
+//				password
+				//	密码验证
+					$(".password").blur(function () {
+						var pwd=$(this).val();
+						var  reg=/^[a-zA-Z0-9]{4,10}$/;//密码由英文字母和数字组成的4-10位字符
+						if (reg.test(pwd)==false) {
+							$(".sp_b").html("密码不正确");
+						    $(".sp_b").css("color","red");
+							return false;
+						}
+						$(".sp_b").html("密码已输入");
+						$(".sp_b").css("color","green");
+						return true;
+					})
+			  
+				$(".password_a").blur(function () {
+					var repwd=$(".password_a").val();
+					var pwd=$(".password").val();
+					console.log(pwd);
+					if (pwd!=repwd) {
+						$(".sp_c").html("两次输入不一致");
+						$(".sp_c").css("color","red");
+						return false;
+					}
+					$(".sp_c").html("输入正确");
+					$(".sp_c").css("color","green");
+					return true;
+				})
+
+
+	var btn=document.querySelector('.login');
+    var input=document.querySelectorAll('input');
+	var sp=document.querySelector('.regsiter');
+	var sp_b=document.querySelector('.password');
+	if(localStorage.message){
+	    var arr=JSON.parse(localStorage.message);
+	}else{
+	    var arr=[];
+	}
+// 判断有没有值，有的话就把他转变成数组
+btn.onclick=function(){
+	console.log(sp.value);
+    var json={
+        'phone':sp.value,
+        'user':sp_b.value
+    }
+    arr.push(json);   //把JSON对象添加到数组里
+    var str=JSON.stringify(arr);    //把对象转换成字符串
+    localStorage.setItem('message',str);
+    location.href="loginpage.html"
+}
+
+          
+				
+					
+			</script>
+	</body>
+</html>

@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+}
+//盒子
+.box{
+    
+}
+//头部
+.header{
+    box-sizing: border-box;
+    padding: 0 5rem;
+    width: 100%;
+    height:87px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e1e1e1;
+}
+//指南
+.guild{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    a{
+        color: #0066cc;
+        font-size: 1.2rem;
+        margin-left: 0.8rem;
+        margin-right: 2.5rem;
+    }
+}
+.guild span:nth-of-type(2){
+    width:9.8rem;
+    height: 2.7rem;
+    border: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.guild .a1{
+    width:1.5rem;
+    height:1.5rem;
+}
+.guild .a2{
+    width:1.1rem;
+    height:1.1rem;
+}
+
+//容器
+.content{
+ width: 100%;
+ background: #fcfcfc; 
+ display: flex;
+ justify-content: space-between;  
+ 
+}
+//广告
+.banner{
+    margin-left: 25.3rem;
+}
+//功能区
+.shop{
+    width: 32.9rem; 
+    font-size: 1.2rem;
+    margin-right: 15.4rem;
+    margin-top: 8.1rem;
+    .register{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        color: #666694;
+        span{
+            font-weight: bolder;
+        }
+        a{
+            color: #0066cc;
+            text-decoration: none;
+        }
+    }
+//  邮箱
+    .maibox{
+        border:1px solid #dedede;
+        width: 26.9rem;
+        height: 5.3rem;
+        margin-top: 1rem;
+        background: white url(../img/2018-01-12_150905.png)no-repeat 2.1rem 1.9rem;
+        background-size: 1.6rem 1.6rem;
+        padding: 0 0 0 6.6rem;
+    }
+//  密码框
+    .password{
+        border:1px solid #dedede;
+        width: 26.9rem;
+        height: 5.3rem;
+        margin-top: 1rem;
+        background: white url(../img/2018-01-12_150920.png)no-repeat 2.1rem 1.9rem;
+        background-size: 1.6rem 1.6rem;
+        padding: 0 0 0 6.6rem;
+    }
+//  自动登录
+    .content1{
+        width: 100%;
+        color: #999999;
+        margin-top: 1.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .content1 .left{
+        display: flex;
+        align-items: center;
+        width: 50%;
+//      border: 1px solid red;
+        input{
+            margin-right: 1.2rem;
+        }
+    }
+   .content1 .right{
+        a{
+             color: #999999;
+             text-decoration: none;
+        }
+    }
+//  登录条
+    .loginbar{
+        background: #ff3c3c;
+        color: white;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        width: 100%;
+        height:5.2rem;
+        margin-top: 1.9rem;
+        border: none;
+    }
+//  提示信息：msg
+    .msg{
+        margin-top:1.8rem;
+    }
+    .icon{
+        margin-top: 1.8rem;
+        display: flex;
+        align-items: center;
+        img{
+            width:3.5rem;
+            height:3.5rem;
+        }
+        .guild1{
+            color: #999999;
+            margin-left:3.3rem;
+        }
+    }
+}
+//尾部
+.footer{
+    margin-top: 5.3rem;
+    width: 100%;
+    .top{
+        width: 100%;
+        text-align: center;
+        color: #6b6b6b;
+        font-size: 1.1rem;
+    }
+    .buttom{
+        font-size:0.9rem;
+        color: #33338a;
+        text-align: center;
+        margin-top: 1.7rem;
+    }
+}
+

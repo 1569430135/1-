@@ -1,0 +1,272 @@
+@charset "utf-8";
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+}
+//解决缩短屏幕不悔要么就是全部设置百分比要么全是固定宽高
+//否则页面会蹦
+//百分比就是比如说搜索710/1400全屏宽等于百分之50多
+//头部headet----------------------------------
+.header{
+    width:136.5rem;
+    height:17.6rem;
+    
+}
+//头上部分header-top--------------------------------
+.header-top{
+    width: 100%;
+     z-index:6;
+    z-index: 5;
+    height:3.5rem;
+    line-height: 3.5rem;
+    background:linear-gradient(#d9d9d9, #f4f4f4);
+//  左边内容
+    .content-left{
+        float: left;
+        margin-left: 5rem;
+    }
+//  导航：nav
+    .content-right{
+        float: right;
+        width: 59.5rem;
+        margin-right: 3.3rem; 
+        height:3.5rem;
+//      子菜单：submenu
+      .submenu{
+          list-style: none;
+          z-index: 5;
+          float: left;
+          font-size: 1.1rem;
+          color:#555555;
+          margin-right: 1.2rem;
+          li{
+              span{
+                  img{
+                      width: 1.6rem;
+                      height:1.5rem;
+                  }
+              }
+              img{
+                  width: 1rem;
+                  height: 1.6rem;
+              }
+          }
+          ol{
+              display: none;
+              z-index:6;
+              li{
+                   z-index:6;
+                   background: #CCCCCC;
+              }
+              
+          }
+      }
+    }
+}
+.content-right .submenu:hover ol{
+    display: block;
+   
+}
+//头下部分---------------------------------------
+.header-bottom{
+    width:100%;
+    clear: both;
+    height:14rem;
+    
+//  左边logo
+    .left-logo{
+        float: left;
+        height: 14rem;
+        width:26.1%;
+         height: 14rem;
+         img{
+             margin-top: 4.1rem;
+             margin-left: 6rem;
+             
+         }
+    }
+//  搜索：search
+    .center-search{
+        float: left;
+        width:50%;
+        height: 14rem;
+//      搜索：search
+        .search{
+            z-index: 2;
+            width: 41.4rem;
+            height: 4.1rem;
+//          border: 1px solid #ff3c3c; 
+            float: left;    
+            margin-top: 5rem;
+        }
+         ul{
+            list-style: none;
+            clear: both;
+            li{
+                font-size: 1.2rem;
+                float: left;
+                margin-right: 1.7rem;
+            }
+        }
+//      按钮：btn
+        .btn{
+            margin-top: 5rem;
+            width: 9.1rem;
+            height: 4.2rem;
+            background:#ff3c3c;
+            color: white;
+            float: left; 
+            border-radius: 0.5rem;
+        }
+//     
+    }
+    .content-right{
+        float: left;
+        height: 4rem;
+        margin-top: 5rem;
+        width:8.5%;
+        background:#f6f6f6;
+//      border: 1px solid #d9d9d9;
+        line-height:4rem;
+        font-size: 1rem;
+        z-index: 1;
+        img{
+            margin: 0 1rem 0 2rem;
+        }
+        .icon{
+          margin:0 1.2rem;
+        }
+       
+    }
+   
+}
+//---------------------footet--------------------------
+.footer{
+    width: 100%;
+//  border: 1px solid red;
+//-----------------footer-top--------------------
+    .footer-top{
+    text-align: center;
+    width:85rem;
+    height: 11.5rem;
+    margin: 0 auto;
+    .content{
+        height:11.5rem;
+        width:11.5rem;
+        text-align: center;
+        margin-right:12.5rem;
+        float: left;
+        img{
+            width:6.2rem;
+            height:6.2rem;
+        }
+        .p_a{
+            font-size: 1rem;
+            margin-top: 1.3rem;
+        }
+        .p_b{
+            font-size: 1.2rem;
+            margin-top:1rem;
+            color: #CCCCCC;
+        }
+     }
+    .ss{
+        margin: 0;
+    }
+    }
+//  ----------------footer-bottom--------------
+.footer-bottom{
+    width:136.6rem;
+    margin-top:6.4rem;
+//  border: 1px solid red;
+    height: 19.6rem;
+.content-left{
+    width:68.5rem;
+    float: left;
+//  border: 1px solid red;
+    margin-left: 16.2rem;
+    height: 19.6rem;
+    dl{
+       float: left;
+       margin-right: 7.5rem;
+        dt{
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+        }
+        dd{
+            margin-top: 1.2rem;
+            font-size:1.1rem;
+            color: #CCCCCC;
+        }
+    }
+}
+    .content-rightss{
+        float: left;
+      .left{
+          float: left;
+          img{
+              width:13.4rem;
+              height: 13.4rem;
+          }
+          .bottom{
+              font-size: 1.4rem;
+              margin-top: 1.2rem;
+          }
+      }
+      .right{
+          float: left;
+          .sp_a{
+              margin-bottom: 1.7rem;
+              margin-left: 1.7rem;
+              img{
+                  width:2.6rem;
+                  height: 2.6rem;
+              }
+          }
+          .sp_b{
+              font-size:1.4rem;
+              color: #ff4e00;
+              margin-bottom: 1.7rem;
+              margin-left: 1.7rem;
+          }
+      }
+    }
+}
+//------------------footer-bottom_a------------------
+.footer-bottom_a{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #CCCCCC;
+}
+//-------------------footer-bottom_b---------------
+.footer-bottom_b{
+    width:100%;
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 3.7rem;
+    color: #CCCCCC;
+    text-align: center;
+    .bottom{
+        margin-top: 2rem;
+        img{
+        width: 9.8rem;
+        margin-right: 1.4rem;
+        height: 3.3rem;
+        }
+    }
+}
+
+}
+
+
+.footer-top .content img:hover{
+   transform:rotate(360deg);
+   transition: all 3s;
+}
+
+
+
+

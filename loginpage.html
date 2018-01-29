@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/sass.css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="box">
+			<!--登录页面头部-->
+			<header>
+				<div class="header">
+					<!--logo标志-->
+					<div class="logo">
+						<img src="img/登录页完成效果_03.png"/>
+					</div>
+					<!--指南-->
+					<div class="guild">
+						<span>您好，欢迎光临1号店！</span>
+						<a href="">请登录</a>
+						<span>
+							<img src="img/2018-01-12_141722.png" class="a1"/>
+							<span>帮助中心</span>
+						    <img src="img/2018-01-12_141731.png" class="a2"/>
+						</span>
+					</div>
+				</div>
+			</header>
+		<!--容器-->
+		<div class="content">
+			<!--广告-->
+			<div class="banner">
+				<img src="img/登录页完成效果_07.png"/>
+			</div>
+			<!--功能区-->
+			<div class="shop">
+				<!--注册-->
+				<div class="register">
+					<span>1号店用户登录</span>
+					<a href="">注册账号</a>
+				</div>
+				<!--邮箱-->
+				<input type="text" class="maibox"/>
+				<!--密码框-->
+				<input type="text" class="password ss"/>
+				<!--是否自动登录-->
+				<div class="content1">
+					<div class="left">				
+					<input type="checkbox"/>
+					<span>自动登录</span>
+					</div>
+					<div class="right">
+						<a href="">忘记密码?</a>
+					</div>
+				</div>
+				<!--登录按钮-->
+				<button class="loginbar">登录</button>
+				<!--提示信息：msg-->
+				<div class="msg">
+					更多合作网站账号登录
+				</div>
+				<!--图标: icon-->
+				<div class="icon">
+					<img src="img/登录页完成效果_11.png"/>
+					<img src="img/登录页完成效果_13.png"/>
+					<img src="img/登录页完成效果_15.png"/>
+					<img src="img/2018-01-12_154321.png"/>
+					<!--指南：guild-->
+					<span class="guild1">
+						更多合作网站
+						<!--下拉框-->
+						<select></select>
+					</span>
+				</div>
+			</div>
+		</div>
+		<!--尾：footer-->
+		<div class="footer">
+			<!--上-->
+			<div class="top">
+				泸ICP13044278 | 合字.B2—20130004 | 营业执照
+			</div>
+			<!--下-->
+			<div class="buttom">
+				Copyright&copy;1号点网上超市2007—2016，AllRights Reserved
+			</div>
+		</div>
+			
+		</div>
+		<script>
+			var loginbar=document.getElementsByClassName("loginbar")[0];
+			var maibox=document.getElementsByClassName("maibox")[0];
+			var ss=document.getElementsByClassName("ss")[0];
+		    loginbar.onclick=function(){
+		    	var obj=localStorage.getItem('message');	//获取数据 现在是一个 字符串格式
+		    	var arr=JSON.parse(obj);		
+		    	//把字符串转化成对象， 现在是数组里面包含着对象
+                var flag=false;			    	
+		    	for(var i=0;i<arr.length;i++){
+			 		if(maibox.value==arr[i].user){//如果用户名和密码都匹配
+			 			flag=true;		//就让变量变false;
+			 		}
+			 	}
+		    	if(flag==true){
+			 		alert('成功');
+			 		location.href="index.html"
+			 	}else{
+			 		alert('失败');
+				}
+		    }
+		    
+		</script>
+	</body>
+</html>

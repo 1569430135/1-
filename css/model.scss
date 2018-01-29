@@ -1,0 +1,177 @@
+@charset "utf-8";
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+}
+
+//头部
+.header{
+    box-sizing: border-box;
+    padding: 0 5rem;
+    width: 100%;
+    height:87px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e1e1e1;
+    box-shadow:0 0 0.1rem 0.5rem #ececec;
+}
+//指南
+.guild{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    a{
+        color: #0066cc;
+        font-size: 1.2rem;
+        margin-left: 0.8rem;
+        margin-right: 2.5rem;
+    }
+}
+.guild span:nth-of-type(2){
+    width:9.8rem;
+    height: 2.7rem;
+    border: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.guild .a1{
+    width:1.5rem;
+    height:1.5rem;
+}
+.guild .a2{
+    width:1.1rem;
+    height:1.1rem;
+}
+
+//容器
+.content{
+ width: 100%;
+ background: #fcfcfc; 
+ display: flex;
+ justify-content: space-between;  
+ 
+}
+//广告
+.banner{
+    margin-left: 25.3rem;
+}
+//功能区
+.shop{
+    width: 32.9rem; 
+    font-size: 1.2rem;
+    margin-right: 15.4rem;
+    margin-top: 8.1rem;
+    .register{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        color: #666694;
+        span{
+            font-weight: bolder;
+        }
+        a{
+            color: #0066cc;
+            text-decoration: none;
+        }
+    }
+}
+//-------------------main-----------------
+.main{
+    width:45rem;
+    height: 44.9rem;
+//  border: 1px solid red;
+    margin:4rem auto;
+//  float: left;
+    .sp{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        color: red;
+    }
+    .sp_a{
+        font-size: 1.5rem;
+        margin-left: 2.5rem;
+        color: red;
+    }
+    .sp_b{
+        font-size: 1.3rem;
+        margin-left:1rem;
+        color: red;
+    }
+    .sp_c{
+        font-size: 1.5rem;
+        margin-left:1rem;
+        color: red;
+    }
+    h1{
+        text-align: center;
+        font-size: 2.2rem;
+        font-family: "微软雅黑";
+    }
+    .regsiter{
+        width:33.3rem;
+        height:5rem;
+        border: 1px solid #dedede;
+        margin-top: 2.1rem;
+    }
+    .regsiter-a{
+        margin-top: 1.1rem;
+        width: 19.2rem;
+        height: 5.2rem;
+        border: 1px solid #dedede;
+    }
+    button{
+        width: 12.3rem;
+        height: 5rem;
+        background:#57565f;
+        color: white;
+        text-align: center;
+        line-height:5rem;
+        border: none;
+        border-radius: 1rem;
+    }
+    .password{
+        width:33.3rem;
+        height: 5rem;
+        border: 1px solid #dedede;
+        margin-top:1rem;
+    }
+     .password_a{
+        width:33.3rem;
+        height: 5rem;
+        border: 1px solid #dedede;
+        margin-top:1rem;
+    }
+    .guild{
+        width: 100%;
+        height: 4.5rem;
+        line-height: 4.5rem;
+        font-size: 1.1rem;
+//      border: 1px solid red;  
+    }
+    .login{
+        width:33.3rem;
+        background: #ff3c3c;
+        a{
+            color: white;
+        }
+    }
+//  --------------footer-----------
+   .footer-top{
+       font-size:1.1rem;
+       color: #333333;
+       text-align: center;
+       margin-top: 2.4rem;
+   }
+   .footer-botton{
+       font-size:1rem;
+       margin-top:1.5rem;
+       text-align: center;
+       color: #333333;
+   }
+}
